@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="50%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="saraGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background with rounded corners -->
+  <rect width="512" height="512" rx="115" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle border highlight -->
+  <rect x="2" y="2" width="508" height="508" rx="113" fill="none" stroke="#334155" stroke-width="4" opacity="0.6"/>
+
+  <!-- Glowing background rings -->
+  <circle cx="210" cy="230" r="130" fill="#06b6d4" opacity="0.12" filter="url(#glow)"/>
+  <circle cx="310" cy="270" r="130" fill="#ec4899" opacity="0.12" filter="url(#glow)"/>
+
+  <!-- Intersecting Couple rings/vault symbol -->
+  <!-- Left Ring: Gabriel (Cyan/Emerald) -->
+  <circle cx="216" cy="236" r="100" fill="none" stroke="url(#accentGrad)" stroke-width="26" stroke-linecap="round"/>
+  
+  <!-- Right Ring: Sara (Pink/Purple) -->
+  <circle cx="296" cy="276" r="100" fill="none" stroke="url(#saraGrad)" stroke-width="26" stroke-linecap="round"/>
+
+  <!-- Currency Symbol in Center -->
+  <text x="256" y="278" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="88" font-weight="900" fill="#f8fafc" text-anchor="middle" dominant-baseline="central">R$</text>
+
+  <!-- Heart/Sparkle badge top-right -->
+  <g transform="translate(370, 110)">
+    <circle cx="0" cy="0" r="32" fill="#ec4899" opacity="0.9"/>
+    <path d="M-12 -6 C-12 -14 0 -14 0 -4 C0 -14 12 -14 12 -6 C12 6 0 14 0 16 C0 14 -12 6 -12 -6 Z" fill="#ffffff"/>
+  </g>
+</svg>
